@@ -10,8 +10,9 @@
     -	config : contain some config like api, url, common config
     -	model : define model  for app
     -	pages : implement pages for app
-    -	router: define router for app
+    -	router: define router for app. We simuate an authen state instead implement real state from redux store
     -	service : define service to get data (seperate with UI). At this time only simutlate all service in 1 file index.ts
+    -   index.css : define global css config. In real app, I use "scss" instead "css" for more flexible
 
 ## Available Scripts
 

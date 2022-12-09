@@ -1,11 +1,21 @@
-import { ChakraProvider, theme, Progress } from "@chakra-ui/react";
-import { RouterProvider } from "react-router-dom";
-import router from "router";
+import { ChakraProvider, theme } from "@chakra-ui/react";
+import { Loading } from "components";
+import React, { useEffect } from "react";
+import AppRouter from "router";
 
 export const App = () => {
+    /**
+     * simuate we have a redux store to store authen state
+     */
+    useEffect(() => {
+        //    dispatch(checkAuthenAction());
+    }, []);
+
     return (
         <ChakraProvider theme={theme}>
-            <RouterProvider router={router} fallbackElement={<Progress />} />
+            <React.Suspense fallback={<Loading />}>
+                <AppRouter />
+            </React.Suspense>
         </ChakraProvider>
     );
 };
